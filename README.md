@@ -47,9 +47,9 @@ your file, e.g.:
 | Done | Count | Location | Spec |
 |---|---|---|---|
 | ✅ | 1 | `assets/images/hero.jpg` | Hero. Wide/landscape, a full styled room with strong natural light — the single most striking shot you have. |
-| ✅ (1 of 9) | 9 | `assets/images/portfolio/project-{1,2,3}-0{1,2,3}.jpg` | 3 per project (3 projects). Per project: 1 wide room shot (living/dining/kitchen) + 1–2 detail or vignette shots (styling, textures, a corner). `project-1-01.jpg` is filled; `project-1-02.jpg` and all of projects 2–3 are still placeholders. |
+| ✅ (3 of 9) | 9 | `assets/images/portfolio/project-{1,2,3}-0{1,2,3}.jpg` | 3 per project (3 projects). All three wide room shots (`project-{1,2,3}-01.jpg`) are filled; the `-02.jpg` detail/vignette shot for each project is still a placeholder. |
 | ✅ | 1 | `assets/images/about/founder.jpg` | Portrait orientation. A person (designer) in a studio or on-site setting — can be a stand-in/stock portrait since the founder is fictional. |
-| ⬜ | 3 | `assets/images/details/detail-{1,2,3}.jpg` | Portrait/square. Close-up texture shots — fabric swatches, materials, a styled tablescape or shelf — used as a decorative strip between sections. |
+| ✅ (2 of 3) | 3 | `assets/images/details/detail-{1,2,3}.jpg` | Portrait/square. Close-up texture shots — fabric swatches, materials, a styled tablescape or shelf — used as a decorative strip between sections. `detail-3.jpg` still a placeholder. |
 
 General guidance: landscape/wide shots for hero and portfolio, portrait for the
 founder and detail strip; at least 1600px on the long edge (2400px+ for the

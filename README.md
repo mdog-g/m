@@ -24,37 +24,34 @@ Then visit http://localhost:8000
 - `script.js` — scroll nav state, mobile menu, contact form handler
 - `assets/images/` — drop real photos here (see below for what's needed)
 
-## Adding real photos
+## Photos
 
-Every photo on the page is currently a styled placeholder block (gradient +
-caption) generated purely in CSS via `.photo-placeholder`, so the site works
-with zero images. Each placeholder's caption names the exact file it expects.
-To swap one in, replace the placeholder `<div>` with an `<img>` pointing at
-your file, e.g.:
+All photo slots are filled with real images. Any new/replacement photo should
+use the `.photo-frame` wrapper (border + `object-fit: cover`), e.g.:
 
 ```html
-<!-- before -->
-<div class="hero-photo photo-placeholder" data-caption="hero.jpg — ..."></div>
-
-<!-- after -->
-<div class="hero-photo">
-  <img src="assets/images/hero.jpg" alt="..." style="width:100%;height:100%;object-fit:cover;" />
+<div class="hero-photo photo-frame">
+  <img src="assets/images/hero.jpg" alt="..." />
 </div>
 ```
 
-### Shot list (14 images)
+The unused `.photo-placeholder` CSS (gradient block + caption) is still in
+`styles.css` in case you add another slot later and want a placeholder while
+sourcing that photo.
 
-| Done | Count | Location | Spec |
-|---|---|---|---|
-| ✅ | 1 | `assets/images/hero.jpg` | Hero. Wide/landscape, a full styled room with strong natural light — the single most striking shot you have. |
-| ✅ (3 of 9) | 9 | `assets/images/portfolio/project-{1,2,3}-0{1,2,3}.jpg` | 3 per project (3 projects). All three wide room shots (`project-{1,2,3}-01.jpg`) are filled; the `-02.jpg` detail/vignette shot for each project is still a placeholder. |
-| ✅ | 1 | `assets/images/about/founder.jpg` | Portrait orientation. A person (designer) in a studio or on-site setting — can be a stand-in/stock portrait since the founder is fictional. |
-| ✅ (2 of 3) | 3 | `assets/images/details/detail-{1,2,3}.jpg` | Portrait/square. Close-up texture shots — fabric swatches, materials, a styled tablescape or shelf — used as a decorative strip between sections. `detail-3.jpg` still a placeholder. |
+### Shot list (11 images) — all filled ✅
 
-General guidance: landscape/wide shots for hero and portfolio, portrait for the
-founder and detail strip; at least 1600px on the long edge (2400px+ for the
-hero); consistent warm, natural-light color grading works best against the
-dark charcoal background.
+| Location | Spec |
+|---|---|
+| `assets/images/hero.jpg` | Hero. Wide living room with natural light and a garden view. |
+| `assets/images/portfolio/project-1-01.jpg` + `project-1-02.webp` | The Rosedale Residence — wide kitchen/dining shot + a moody navy velvet lounge vignette. |
+| `assets/images/portfolio/project-2-01.jpg` + `project-2-02.jpg` | Harbourside Apartment — neutral living room wide shot + the Sydney Harbour Bridge/Opera House view. |
+| `assets/images/portfolio/project-3-01.jpg` + `project-3-02.jpg` | The Fig Tree House — blush-toned living room wide shot + timber house exterior in greenery. |
+| `assets/images/about/founder.jpg` | Portrait of Jordan Ashworth, Principal Designer. |
+| `assets/images/details/detail-{1,2,3}.jpg` | Styled console vignette, illuminated wall art panel, folded linen close-up. |
+
+Note `project-1-02.webp` is a `.webp` file (the others are `.jpg`) — browsers handle
+this fine, but keep it in mind if you script anything against file extensions.
 
 ## Known placeholders — update before launch
 

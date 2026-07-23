@@ -7,7 +7,6 @@
 
   window.addEventListener('load', () => {
     if (window.initConstellation) {
-      window.initConstellation('hero-canvas', 'bolt', 900);
       window.initConstellation('science-canvas', 'burst', 700);
     }
   });

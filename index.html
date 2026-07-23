@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CELSIUS — Live Fit. Ignite Now.</title>
-  <meta name="description" content="CELSIUS is the premium, clinically proven fitness energy drink — zero sugar, 200mg caffeine, 7 essential vitamins, and the proprietary MetaPlus formula. Now in Australia." />
+  <title>NOVA — Live Fit. Ignite Now.</title>
+  <meta name="description" content="NOVA is the premium, clinically proven fitness energy drink — zero sugar, 200mg caffeine, 7 essential vitamins, and the proprietary NovaCore formula." />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpolygon points='12,2 22,22 2,22' fill='%238052ff'/%3E%3C/svg%3E" />
   <link rel="stylesheet" href="styles/main.css" />
 </head>
@@ -16,15 +16,14 @@
     <div class="wrap">
       <a href="#top" class="logo">
         <span class="logo-mark"></span>
-        Celsius
+        Nova
       </a>
       <div class="nav-links">
         <a href="#flavours">Flavours</a>
         <a href="#science">Science</a>
-        <a href="#retailers">Where To Buy</a>
       </div>
       <div class="nav-cta">
-        <a href="#retailers" class="btn-primary">Shop Now</a>
+        <a href="#order" class="btn-primary">Order Here</a>
       </div>
     </div>
   </nav>
@@ -38,18 +37,19 @@
           <span class="eyebrow">Premium Fitness Energy</span>
           <h1>Live fit.<br />Ignite now.</h1>
           <p class="body-copy">
-            CELSIUS is a clinically proven, functional energy drink made to accelerate your
+            NOVA is a clinically proven, functional energy drink made to accelerate your
             workout — not just your afternoon. Zero sugar, zero compromise, and a formula
             built on real science.
           </p>
           <div class="hero-actions">
-            <a href="#retailers" class="btn-primary">Shop The Range</a>
+            <a href="#order" class="btn-primary">Order Here</a>
             <a href="#science" class="btn-ghost">See The Science →</a>
           </div>
         </div>
         <div class="split-visual">
-          <div class="visual-canvas-wrap">
-            <canvas id="hero-canvas"></canvas>
+          <div class="can-hero-wrap">
+            <div class="can-glow" aria-hidden="true"></div>
+            <div class="can-hero" data-can="hero" data-accent="#8052ff" data-accent2="#15846e" data-label="Original" data-big></div>
           </div>
         </div>
       </div>
@@ -59,35 +59,34 @@
     <section id="flavours">
       <div class="wrap split">
         <div class="split-text">
-          <span class="eyebrow">The Australian Range</span>
+          <span class="eyebrow">The Full Lineup</span>
           <h2 class="section-headline">Five sparkling<br />flavours.</h2>
           <p class="body-copy muted">
-            Fruit-forward, sparkling, and refreshingly light — the CELSIUS lineup available
-            across Australia and New Zealand, distributed exclusively by Suntory Oceania.
+            Fruit-forward, sparkling, and refreshingly light — the NOVA lineup, crafted
+            for fans who want more than just a boost.
           </p>
         </div>
         <div class="split-visual">
-          <div class="flavour-list">
-            <div class="flavour-row">
-              <span class="flavour-dot" style="background:#8052ff"></span>
-              <span class="flavour-name">Kiwi Strawberry</span>
+          <div class="flavour-grid">
+            <div class="flavour-card">
+              <div class="flavour-card-can" data-can="kiwi" data-accent="#8052ff" data-accent2="#5b8def" data-label="Kiwi Strawberry"></div>
+              <p class="flavour-card-name"><strong>Kiwi Strawberry</strong></p>
             </div>
-            <div class="flavour-row">
-              <span class="flavour-dot" style="background:#ffb829"></span>
-              <span class="flavour-name">Watermelon Lemonade</span>
+            <div class="flavour-card">
+              <div class="flavour-card-can" data-can="watermelon" data-accent="#ffb829" data-accent2="#ff7a59" data-label="Watermelon Lemonade"></div>
+              <p class="flavour-card-name"><strong>Watermelon Lemonade</strong></p>
             </div>
-            <div class="flavour-row">
-              <span class="flavour-dot" style="background:#15846e"></span>
-              <span class="flavour-name">Cosmic Vibe</span>
+            <div class="flavour-card">
+              <div class="flavour-card-can" data-can="cosmic" data-accent="#15846e" data-accent2="#8052ff" data-label="Cosmic Vibe"></div>
+              <p class="flavour-card-name"><strong>Cosmic Vibe</strong></p>
             </div>
-            <div class="flavour-row">
-              <span class="flavour-dot" style="background:#c084fc"></span>
-              <span class="flavour-name">Sunset Vibe</span>
-              <span class="flavour-desc">— mango passionfruit</span>
+            <div class="flavour-card">
+              <div class="flavour-card-can" data-can="sunset" data-accent="#c084fc" data-accent2="#ffb829" data-label="Sunset Vibe"></div>
+              <p class="flavour-card-name"><strong>Sunset Vibe</strong>Mango Passionfruit</p>
             </div>
-            <div class="flavour-row">
-              <span class="flavour-dot" style="background:#5b8def"></span>
-              <span class="flavour-name">Green Apple Cherry</span>
+            <div class="flavour-card">
+              <div class="flavour-card-can" data-can="greenapple" data-accent="#5b8def" data-accent2="#15846e" data-label="Green Apple Cherry"></div>
+              <p class="flavour-card-name"><strong>Green Apple Cherry</strong></p>
             </div>
           </div>
         </div>
@@ -98,10 +97,10 @@
     <section id="science">
       <div class="wrap split reverse">
         <div class="split-text">
-          <span class="eyebrow">The MetaPlus Formula</span>
+          <span class="eyebrow">The NovaCore Formula</span>
           <h2 class="section-headline">Engineered to<br />perform.</h2>
           <p class="body-copy muted">
-            Every can is built around CELSIUS's proprietary MetaPlus blend — green tea
+            Every can is built around NOVA's proprietary NovaCore blend — green tea
             extract with EGCG, guarana seed extract, and ginger root, combined with 7
             essential vitamins. It's a clinically proven formula shown to accelerate
             metabolism and support thermogenesis when paired with exercise.
@@ -148,23 +147,15 @@
       </div>
     </section>
 
-    <!-- RETAILERS -->
-    <section id="retailers">
+    <!-- ORDER -->
+    <section id="order" class="tight cta-center">
       <div class="wrap">
-        <span class="eyebrow">Now In Australia &amp; New Zealand</span>
-        <h2 class="section-headline">Find your can.</h2>
-        <p class="body-copy muted">
-          CELSIUS is distributed exclusively across ANZ by Suntory Oceania and stocked
-          nationwide.
+        <span class="eyebrow">Get Yours</span>
+        <h2 class="section-headline">Fuel today.</h2>
+        <p class="body-copy muted cta-center-copy">
+          Grab a case of NOVA and feel the difference in your next workout.
         </p>
-        <div class="retailer-list">
-          <span>7-Eleven</span>
-          <span>Coles</span>
-          <span>Specialty Fitness &amp; Supplement Retailers</span>
-        </div>
-        <div style="margin-top: 36px;">
-          <a href="#top" class="btn-primary">Find A Retailer</a>
-        </div>
+        <a href="#top" class="btn-primary">Order Here</a>
       </div>
     </section>
 
@@ -175,12 +166,12 @@
       <div class="footer-top">
         <a href="#top" class="logo">
           <span class="logo-mark"></span>
-          Celsius
+          Nova
         </a>
         <div class="footer-links">
           <a href="#flavours">Flavours</a>
           <a href="#science">Science</a>
-          <a href="#retailers">Where To Buy</a>
+          <a href="#order">Order</a>
         </div>
       </div>
       <p class="footer-disclaimer">
@@ -188,18 +179,13 @@
         caffeine. Contains caffeine — 200mg per can. Consult a healthcare professional
         before use if you have any medical conditions.
       </p>
-      <p class="footer-sources">
-        Product information sourced from
-        <a href="https://au.celsius.com/" target="_blank" rel="noopener">au.celsius.com</a>.
-        This is an unofficial, independently built fan site and is not affiliated with
-        or endorsed by Celsius Holdings, Inc. or Suntory Oceania.
-      </p>
-      <p class="footer-copyright">© 2026 · Built as a fan tribute to CELSIUS. All trademarks belong to their respective owners.</p>
+      <p class="footer-copyright">© 2026 NOVA. All rights reserved.</p>
     </div>
   </footer>
 
   <script src="scripts/ambient.js"></script>
   <script src="scripts/constellation.js"></script>
+  <script src="scripts/cans.js"></script>
   <script src="scripts/main.js"></script>
 </body>
 </html>

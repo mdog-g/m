@@ -135,6 +135,21 @@ svg { display: block; }
   line-height: 1.4;
 }
 
+/* ---------- REAL PHOTOS ---------- */
+
+.photo-frame {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--hairline-strong);
+}
+.photo-frame img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 /* ---------- HERO ---------- */
 
 .hero {
@@ -152,8 +167,15 @@ svg { display: block; }
   align-items: flex-end;
   padding: 48px;
 }
+.hero-photo.photo-frame::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(15, 13, 9, 0.05) 0%, rgba(15, 13, 9, 0.75) 100%);
+  z-index: 1;
+}
 
-.hero-copy { max-width: 640px; }
+.hero-copy { max-width: 640px; position: relative; z-index: 2; }
 
 .eyebrow {
   font-size: 12px;

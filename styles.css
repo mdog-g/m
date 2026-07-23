@@ -14,6 +14,9 @@
 
   --page-max-width: 1200px;
   --section-gap: 160px;
+
+  --disclaimer-height: 34px;
+  --nav-height: 76px;
 }
 
 * { box-sizing: border-box; }
@@ -46,11 +49,26 @@ svg { display: block; }
 }
 .nav.scrolled { border-bottom-color: var(--hairline-strong); }
 
+.disclaimer-bar {
+  margin: 0;
+  height: var(--disclaimer-height);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 16px;
+  background: var(--brass-dim);
+  color: #17140f;
+  font-size: 11px;
+  letter-spacing: 0.03em;
+  font-weight: 500;
+}
+
 .nav-inner {
   max-width: var(--page-max-width);
   margin: 0 auto;
   padding: 0 32px;
-  height: 76px;
+  height: var(--nav-height);
   display: flex;
   align-items: center;
   gap: 40px;
@@ -162,7 +180,7 @@ svg { display: block; }
 
 .hero-photo {
   flex: 1;
-  margin-top: 76px;
+  margin-top: calc(var(--nav-height) + var(--disclaimer-height));
   display: flex;
   align-items: flex-end;
   padding: 48px;
@@ -516,7 +534,7 @@ svg { display: block; }
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 76px;
+    top: calc(var(--nav-height) + var(--disclaimer-height));
     left: 0; right: 0;
     background: var(--bg);
     border-bottom: 1px solid var(--hairline-strong);

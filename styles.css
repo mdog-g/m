@@ -9,7 +9,7 @@
   --color-saddle-brown: #5d3a19;
   --color-ink-black: #000000;
 
-  --font-display: 'Italiana', 'Cormorant Garamond', ui-serif, Georgia, serif;
+  --font-display: 'Cormorant Garamond', 'Italiana', ui-serif, Georgia, serif;
   --font-body: 'Inter', ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
 
   --text-body-sm: 16px;
@@ -67,6 +67,7 @@ a { color: var(--color-saddle-brown); text-decoration: none; }
 
 .nav-mark {
   font-family: var(--font-display);
+  font-weight: 600;
   font-size: 22px;
   letter-spacing: 0.02em;
   color: var(--color-saddle-brown);
@@ -126,7 +127,7 @@ a { color: var(--color-saddle-brown); text-decoration: none; }
 
 .hero-title {
   font-family: var(--font-display);
-  font-weight: 400;
+  font-weight: 500;
   font-size: var(--text-display-lg);
   line-height: var(--leading-display-lg);
   color: var(--color-saddle-brown);
@@ -214,6 +215,7 @@ a { color: var(--color-saddle-brown); text-decoration: none; }
 .service-name {
   font-family: var(--font-display);
   font-style: normal;
+  font-weight: 600;
   font-size: 40px;
   line-height: 1.05;
   color: var(--color-saddle-brown);
@@ -292,6 +294,7 @@ a { color: var(--color-saddle-brown); text-decoration: none; }
 
 .rating-badge {
   font-family: var(--font-display);
+  font-weight: 500;
   font-size: var(--text-display-lg);
   line-height: 1;
   color: var(--color-saddle-brown);
@@ -320,6 +323,7 @@ a { color: var(--color-saddle-brown); text-decoration: none; }
 
 .review-quote {
   font-family: var(--font-display);
+  font-weight: 600;
   font-size: 26px;
   line-height: 1.25;
   margin: 0 0 20px;
@@ -328,6 +332,35 @@ a { color: var(--color-saddle-brown); text-decoration: none; }
 .review-author {
   font-size: 16px;
   font-weight: 500;
+}
+
+.review-photos {
+  display: flex;
+  gap: var(--spacing-10);
+  margin-top: 20px;
+}
+
+.review-photo {
+  width: 90px;
+  aspect-ratio: 1 / 1;
+  background:
+    repeating-linear-gradient(
+      135deg,
+      var(--color-chalk-cream),
+      var(--color-chalk-cream) 8px,
+      var(--color-lavender-stone) 8px,
+      var(--color-lavender-stone) 16px
+    );
+  border: 1px solid var(--color-saddle-brown);
+  display: flex;
+  align-items: flex-end;
+}
+
+.plate-label--sm {
+  font-size: 10px;
+  line-height: 1.2;
+  padding: 4px 6px;
+  margin: 6px;
 }
 
 /* -------------------------------- Visit / Contact ---------------------------- */
@@ -351,6 +384,7 @@ a { color: var(--color-saddle-brown); text-decoration: none; }
 .visit-value {
   font-size: 22px;
   font-family: var(--font-display);
+  font-weight: 600;
   margin: 0;
 }
 
@@ -395,6 +429,7 @@ a { color: var(--color-saddle-brown); text-decoration: none; }
 
 .footer-mark {
   font-family: var(--font-display);
+  font-weight: 600;
   font-size: 28px;
   color: var(--color-saddle-brown);
 }

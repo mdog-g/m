@@ -37,6 +37,29 @@ requirement — the layout will crop/cover). To swap one in:
    </div>
    ```
 
+## Adding real videos
+
+The Videos section (`#videos` in `index.html`) has 4 placeholder cards, each a
+vertical 9:16 "reel" slot with a play badge and a label describing what should
+go there. To swap one in:
+
+1. Add your clip to `videos/` (e.g. `videos/reel-1.mp4`) and, optionally, a
+   still-frame poster image to `images/` (e.g. `images/reel-1-poster.jpg`).
+2. Replace the matching placeholder `<div class="video-item ph ph-video" ...>`
+   in `index.html` with:
+
+   ```html
+   <div class="video-item">
+     <video controls preload="metadata" poster="images/reel-1-poster.jpg">
+       <source src="videos/reel-1.mp4" type="video/mp4">
+     </video>
+   </div>
+   ```
+
+Keep clips reasonably compressed (H.264 MP4, a few MB each) so the page loads
+quickly on mobile data. `js/main.js` already pauses any other playing video
+when one starts, so visitors don't get overlapping audio.
+
 ## Content notes
 
 - Business name, address, phone, and hours were pulled from public listings

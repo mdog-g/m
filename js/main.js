@@ -20,4 +20,13 @@ document.addEventListener('DOMContentLoaded', function () {
   if (yearEl) {
     yearEl.textContent = new Date().getFullYear();
   }
+
+  var videos = document.querySelectorAll('.video-item video');
+  videos.forEach(function (video) {
+    video.addEventListener('play', function () {
+      videos.forEach(function (other) {
+        if (other !== video) other.pause();
+      });
+    });
+  });
 });

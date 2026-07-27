@@ -21,21 +21,31 @@ python3 -m http.server 8000
 
 then open `http://localhost:8000`.
 
-## Replacing placeholder photos
+## Photos
 
-Every image on the site is currently a striped placeholder block with a text
-label describing what should go there (dimensions are a guide, not a hard
-requirement — the layout will crop/cover). To swap one in:
+The logo, hero (storefront), about, and gallery images are real photos from
+the salon. The 9 service cards still use striped placeholder blocks — no
+photo was confirmed to match a specific service (acrylic vs. gel vs. dip
+powder, etc.), so rather than guess and mislabel a technique, those stay as
+placeholders until real per-service shots come through.
 
-1. Add your photo to `images/` (e.g. `images/hero.jpg`).
+To swap a placeholder for a real photo:
+
+1. Add your photo to `images/` (e.g. `images/service-acrylic.jpg`).
 2. In `index.html`, find the matching `<div class="... ph" data-label="...">`
-   and replace it with an `<img class="...">` pointing at your file, e.g.:
+   and replace it with an `<img>` pointing at your file, e.g.:
 
    ```html
-   <div class="hero-image">
-     <img src="images/hero.jpg" alt="Salon interior" style="width:100%;height:100%;object-fit:cover;">
+   <div class="service-image">
+     <img src="images/service-acrylic.jpg" alt="Acrylic nail set">
    </div>
    ```
+
+The gallery (`#gallery`) uses a CSS masonry layout (`column-count`), so photos
+of any aspect ratio drop in at their natural proportions — no cropping needed.
+Photos were resized to a 1600px max dimension and re-compressed on the way in
+to keep page weight down; do the same for any new ones you add (e.g. via
+Squoosh or TinyPNG) if they come straight off a phone.
 
 ## Adding real videos
 

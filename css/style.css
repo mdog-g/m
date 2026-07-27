@@ -39,6 +39,8 @@ a:hover { color: var(--color-ink); }
 
 img, .ph { display: block; }
 
+img { max-width: 100%; }
+
 h1, h2, h3, p, form, fieldset { margin: 0; }
 
 button, input, textarea {
@@ -148,6 +150,15 @@ main > section {
   font-size: 14px;
   text-transform: uppercase;
   letter-spacing: -0.018em;
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  height: 44px;
+  width: auto;
+  max-width: none;
+  mix-blend-mode: multiply;
 }
 
 .reg {
@@ -231,6 +242,14 @@ main > section {
 .hero-image {
   width: 100%;
   aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
 }
 
 /* -------------------- Services -------------------- */
@@ -246,6 +265,13 @@ main > section {
 .service-image {
   margin-top: 20px;
   aspect-ratio: 4 / 5;
+  overflow: hidden;
+}
+
+.service-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .services-note {
@@ -256,15 +282,19 @@ main > section {
 /* -------------------- Gallery -------------------- */
 
 .gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-auto-rows: 180px;
-  gap: 29px;
+  column-count: 4;
+  column-gap: 29px;
 }
 
-.gallery-item.span-tall  { grid-row: span 2; }
-.gallery-item.span-wide  { grid-column: span 2; }
-.gallery-item.span-square { grid-row: span 1; }
+.gallery-item {
+  break-inside: avoid;
+  margin-bottom: 29px;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+}
 
 /* -------------------- Videos -------------------- */
 
@@ -323,6 +353,13 @@ main > section {
 
 .about-image {
   aspect-ratio: 9 / 11;
+  overflow: hidden;
+}
+
+.about-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* -------------------- Hours & Location -------------------- */
@@ -447,8 +484,7 @@ main > section {
   .about { grid-template-columns: 1fr; }
   .hours-layout { grid-template-columns: 1fr; }
   .contact-layout { grid-template-columns: 1fr; }
-  .gallery-grid { grid-template-columns: repeat(2, 1fr); }
-  .gallery-item.span-wide { grid-column: span 2; }
+  .gallery-grid { column-count: 3; }
   .video-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
@@ -480,7 +516,7 @@ main > section {
   .heading-sm { font-size: 30px; }
 
   .service-grid { grid-template-columns: 1fr; }
-  .gallery-grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 140px; }
+  .gallery-grid { column-count: 2; }
   .video-grid { grid-template-columns: repeat(2, 1fr); }
 
   .hero-actions { flex-wrap: wrap; }

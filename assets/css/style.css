@@ -110,9 +110,17 @@ img { max-width: 100%; display: block; }
   letter-spacing: -0.018em;
   text-transform: uppercase;
   font-weight: 400;
+  display: flex;
+  align-items: center;
 }
 
 .wordmark sup { font-size: 9px; }
+
+.logo-mark {
+  height: 40px;
+  width: auto;
+  display: block;
+}
 
 .site-nav {
   display: flex;
@@ -258,6 +266,21 @@ img { max-width: 100%; display: block; }
   margin-bottom: 20px;
 }
 
+.case-image,
+.gallery-image,
+.about-image {
+  overflow: hidden;
+}
+
+.case-image img,
+.gallery-image img,
+.about-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 .pill {
   display: inline-block;
   align-self: flex-start;
@@ -334,7 +357,7 @@ img { max-width: 100%; display: block; }
 }
 
 .about-image {
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 4 / 3;
 }
 
 .about-copy .heading-sm { margin-bottom: 32px; }

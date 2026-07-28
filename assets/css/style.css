@@ -276,6 +276,37 @@ img { max-width: 100%; display: block; }
   border: 1px solid var(--color-carbon-black);
 }
 
+/* ---------- Service menu list ---------- */
+
+.menu {
+  margin-top: 80px;
+}
+
+.menu-head {
+  margin-bottom: 0;
+}
+
+.subheading {
+  font-size: var(--text-subheading);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  margin: 0 0 24px;
+}
+
+.menu-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: var(--gutter);
+}
+
+.menu-row {
+  padding: 14px 0;
+  border-bottom: 1px solid var(--color-carbon-black);
+  font-size: 14px;
+  letter-spacing: -0.018em;
+}
+
 /* ---------- Gallery ---------- */
 
 .gallery-grid {
@@ -475,6 +506,7 @@ img { max-width: 100%; display: block; }
   }
 
   .case-grid { grid-template-columns: 1fr; }
+  .menu-list { grid-template-columns: 1fr; }
   .gallery-grid { grid-template-columns: repeat(2, 1fr); }
   .about-grid { grid-template-columns: 1fr; gap: 40px; }
   .info-grid { grid-template-columns: 1fr; gap: 40px; }

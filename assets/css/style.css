@@ -282,6 +282,10 @@ img { max-width: 100%; display: block; }
   display: block;
 }
 
+.pedicure-photo {
+  object-position: 50% 12%;
+}
+
 .pill {
   display: inline-block;
   align-self: flex-start;

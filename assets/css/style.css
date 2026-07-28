@@ -274,7 +274,8 @@ img { max-width: 100%; display: block; }
 
 .case-image img,
 .gallery-image img,
-.about-image img {
+.about-image img,
+.gallery-image video {
   width: 100%;
   height: 100%;
   object-fit: cover;
